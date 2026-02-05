@@ -3,15 +3,14 @@ plugins {
     id 'kotlin-android'
 }
 
-
-
 android {
-    compileSdkVersion 33
+    namespace "com.example.todo_app_hive"
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.todo_app_hive"
-        minSdkVersion 21
-        targetSdkVersion 33
+        minSdk 21
+        targetSdk 34
         versionCode 1
         versionName "1.0"
     }
@@ -25,16 +24,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
-    }
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
+        jvmTarget = '17'
     }
 }
 
@@ -43,5 +38,5 @@ flutter {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.22"
 }
